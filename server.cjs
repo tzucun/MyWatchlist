@@ -30,6 +30,14 @@ app.get('/', (req, res) => {
   });
 });
 
+app.get('/login', (req, res) => {
+    res.render('login', { page_title: 'Login' });
+});
+
+app.get('/register', (req, res) => {
+    res.render('register', { page_title: 'Register' });
+});
+
 // Home page
 app.get("/", (req, res) => {
     const query = `
