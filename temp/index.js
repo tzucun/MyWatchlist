@@ -1,33 +1,46 @@
 let currentSlide = 0;
-        const images = document.querySelectorAll('.images img');
-        const totalSlides = images.length;
-        const imagesContainer = document.querySelector('.images');
+const images = document.querySelectorAll('.big-img > img');
+const totalSlides = images.length;
+const imagesContainer = document.querySelector('.images');
+const recommendedImages = [
+    ['images/image1.jpg', 'images/image2.jpg', 'images/image3.jpg'],
+    ['images/image2.jpg', 'images/image3.jpg', 'images/image4.jpg'],
+    ['images/image3.jpg', 'images/image4.jpg', 'images/image5.jpg'],
+    ['images/image4.jpg', 'images/image5.jpg', 'images/image6.jpg'],
+    ['images/image5.jpg', 'images/image6.jpg', 'images/image1.jpg'],
+    ['images/image6.jpg', 'images/image1.jpg', 'images/image2.jpg']
+];
 
-        // Set the width of the images container based on the number of images
-        imagesContainer.style.width = `${totalSlides * 100}%`; // Each image takes 100% of the container width
+// Set the width of the images container based on the number of images
+imagesContainer.style.width = `${totalSlides * 100}%`; // Each image takes 100% of the container width
 
-        function showSlide(index) {
-            // Ensure the index wraps around
-            if (index < 0) {
-                currentSlide = totalSlides - 1;
-            } else if (index >= totalSlides) {
-                currentSlide = 0;
-            } else {
-                currentSlide = index;
-            }
-            
-            // Calculate the new transform value
-            const offset = -currentSlide * (100 / totalSlides); // Each image takes 100% of the width
-            imagesContainer.style.transform = `translateX(${offset}%)`;
-        }
+function showSlide(index) {
+    // Adjust the index to wrap around
+    currentSlide = (index + totalSlides) % totalSlides;
 
-        function nextSlide() {
-            showSlide(currentSlide + 1);
-        }
+    // Calculate the new transform value
+    const offset = -currentSlide * (100 / totalSlides); // Each image takes 100% of the width
+    imagesContainer.style.transform = `translateX(${offset}%)`;
 
-        function prevSlide() {
-            showSlide(currentSlide - 1);
-        }
+    // Update recommended images
+    updateRecommendedImages(currentSlide);
+}
 
-        // Optional: Auto-slide every 5 seconds
-        setInterval(nextSlide, 5000);
+function nextSlide() {
+    showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+    showSlide(currentSlide - 1);
+}
+
+// Update the recommended images based on the current slide
+function updateRecommendedImages(slideIndex) {
+    const recommendedCards = document.querySelectorAll('.moovies .card img');
+    recommendedImages[slideIndex].forEach((src, index) => {
+        recommendedCards[index].src = src;
+    });
+}
+
+// Optional: Auto-slide every 5 seconds
+setInterval(nextSlide, 5000);
