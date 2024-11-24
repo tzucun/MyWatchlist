@@ -1,0 +1,197 @@
+/* General styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+:root{
+    --body-cc:#7469B6;
+    --text-cc:#FFFFFF;
+    --third-cc:#E1AFD1;
+    --last-cc:#AD88C6;
+    --new-cc:#FFF6F6;
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--new-cc);
+}
+
+ nav{
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 40px 0;
+    height: 70px;
+    width: 100%;
+    background-color: var(--body-cc);
+    z-index: 1000; 
+}
+
+.logo{
+    width: auto;
+    height: 60px;
+    margin: auto;
+}
+
+nav .navbar{
+    position: relative;
+    height: 100%;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul{
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li{
+    margin: 0 15px;
+    list-style: none;
+}
+
+ul li a{
+    position: relative;
+    text-decoration: none;
+    font-size: 1.01rem;
+    font-weight: 500;
+    color: var(--text-cc);
+}
+
+nav .searchbar{
+    left: 125px;
+    position: absolute;
+    background-color: white;
+    border-radius: 2rem;
+    padding: 0.3rem 0.9rem;
+}
+
+nav .searchbar i{
+    color: purple;
+}
+
+.searchbar input{
+    border: none;
+    outline: none;
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+    width: 40vw;
+
+}
+
+h1 {
+    margin-left: 100px;
+    margin-bottom: 0;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    max-width: 1350px;
+    margin: 0px auto 20px;
+    border-collapse: separate;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: var(--body-cc);
+    color: white;
+}
+
+tbody{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.tcolumn {
+    padding: 5px 0px;
+    padding-left: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.container th{
+    text-align: center;
+}
+
+.Rank{
+    width: 7%;
+    text-align: center;
+}
+.rank-num{
+    font-size: 3rem;
+}
+
+.Title{
+    width: 58%;
+}
+.Score,.Your-Score{
+    width: 10%;
+    text-align: center;
+}
+
+.Status{
+    width: 15%;
+    text-align: center;
+}
+
+.title-col{
+    display: flex;
+}
+.posters{
+    margin: 0px 10px;
+    position: relative;
+}
+.posters img{
+    width: 100px;
+    height: 150px;
+    overflow: hidden;
+    object-fit: cover;
+    display: inline-block;
+    border-radius: 4px;
+}
+.details{
+    margin: auto 10px;
+    font-size: medium;
+    font-weight: normal;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Button styles */
+.add-btn {
+    padding: 8px 15px;
+    background-color: var(--body-cc);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+}
+
+.add-btn:hover {
+    background-color: var(--third-cc);
+}
+
+.add-btn.disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.add-btn[disabled]:hover {
+    background-color: #ccc;
+}
+
