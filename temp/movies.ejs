@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <link rel="stylesheet" href="movies.js">
+    <link rel="stylesheet" href="movies.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <a href="index"><img class="logo" src="images/logo.png" alt="LOGO"></a>
+            <div class="searchbar">
+                <i class="uil uil-search"></i>
+                <input type="search" placeholder="search">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="movies">Movies</a></li>
+                    <li><a href="watchlist">WatchList</a></li>
+                    <li><a href="">Help</a></li>
+                    <li><a href="login">Login</a></li>
+                    <li><a href="">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Top Movies</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th class="tcolumn Rank">Rank</th>
+                    <th class="tcolumn Title">Title</th>
+                    <th class="tcolumn Score">Score</th>
+                    <th class="tcolumn Your-Score">Your Score</th>
+                    <th class="tcolumn Status">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Contoh data film -->
+                <tr>
+                    <td class="tcolumn Rank rank-num">1</td>
+                    <td class="tcolumn Title title-col">
+                        <a class="posters" href=""><img src="images/image1.jpg" alt=""></a>
+                        <div class="details">
+                            <h3 id="title-content">Ao No Hako</h3>
+                            <p>Episode : <span id="eps-content"></span></p>
+                            <p>Genre : <span id="genre-content"></span></p>
+                            <p>Release year : <span id="year-content">2</span></p>
+                        </div>
+                    </td>
+                    <td class="tcolumn Score">9.32</td>
+                    <td class="tcolumn Your-Score">N/A</td>
+                    <td class="tcolumn Status">
+                        <!-- Tombol untuk pengguna login -->
+                        <button class="add-btn" onclick="addToWatchlist(1)">Add to My List</button>
+                        <!-- Tombol untuk pengguna belum login -->
+                        <!-- <button class="add-btn disabled" disabled>Login to Add</button> -->
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tcolumn Rank rank-num">2</td>
+                    <td class="tcolumn Title title-col">
+                        <a class="posters" href=""><img src="images/image2.jpg" alt=""></a>
+                        <div class="details">
+                            <h3 id="title-content">Takagi-san</h3>
+                            <p>Episode : <span id="eps-content"></span></p>
+                            <p>Genre : <span id="genre-content"></span></p>
+                            <p>Release year : <span id="year-content">2</span></p>
+                        </div>
+                    </td>
+                    <td class="tcolumn Score">9.32</td>
+                    <td class="tcolumn Your-Score">N/A</td>
+                    <td class="tcolumn Status">
+                        <button class="add-btn" onclick="addToWatchlist(1)">Add to My List</button>
+                        <!-- <button class="add-btn disabled" disabled>Login to Add</button> -->
+                    </td>
+                </tr>
+               
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
