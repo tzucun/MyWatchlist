@@ -1,9 +1,95 @@
 /* Gaya umum untuk halaman */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f3f4f6;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+:root{
+    --body-cc:#7469B6;
+    --text-cc:#FFFFFF;
+    --third-cc:#E1AFD1;
+    --last-cc:#AD88C6;
+    --new-cc:#FFF6F6;
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--new-cc);
+}
+
+ nav{
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 40px 0;
+    height: 70px;
+    width: 100%;
+    background-color: var(--body-cc);
+    z-index: 1000; 
+}
+
+.logo{
+    width: auto;
+    height: 60px;
+}
+
+nav .navbar{
+    position: relative;
+    height: 100%;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul{
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li{
+    margin: 0 15px;
+    list-style: none;
+}
+
+ul li a{
+    position: relative;
+    text-decoration: none;
+    font-size: 1.01rem;
+    font-weight: 500;
+    color: var(--text-cc);
+}
+
+nav .searchbar{
+    left: 125px;
+    position: absolute;
+    background-color: white;
+    border-radius: 2rem;
+    padding: 0.3rem 0.9rem;
+}
+
+nav .searchbar i{
+    color: purple;
+}
+
+.searchbar input{
+    border: none;
+    outline: none;
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+    width: 40vw;
+
+}
+
+.contain{
+    background-color: var(--new-cc);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,7 +135,7 @@ input[type="password"] {
 
 button {
     padding: 10px 15px;
-    background-color: #4caf50;
+    background-color: var(--body-cc);
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -58,11 +144,11 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    filter: brightness(92%);
 }
 
 a {
-    color: #4caf50;
+    color: var(--last-cc);
     text-decoration: none;
     margin-top: 10px;
     display: inline-block;
@@ -102,4 +188,3 @@ a:hover {
     cursor: pointer;
     color: #555;
 }
-
