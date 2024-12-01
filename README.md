@@ -1,1 +1,1 @@
-Boleh diejakan ya adik"
+
